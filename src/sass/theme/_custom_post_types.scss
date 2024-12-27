@@ -1,0 +1,68 @@
+.button-cells {
+    display: flex;
+    gap: $spacer;
+    margin-right: $spacer;
+    justify-content: space-between;
+    width: calc( 100% - #{$accordion-padding-x*2} - #{$accordion-icon-width} - #{$spacer} );
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+        
+        > span {
+            flex: 0 0 20%;
+
+            &:first-child {
+                text-align: left;
+            }
+        }
+
+    }
+
+}
+
+.wp-block-cover {
+
+    &.application-note-cover,
+    &.case-study-cover {
+        min-height: 340px;
+        align-items: stretch;
+
+        .entry-content {
+            font-size: $font-size-sm;
+        }
+        
+    }
+
+    &.application-note-cover {
+        align-items: flex-start;
+    
+        .entry-title {
+            font-weight: $font-weight-base;
+            font-size: $lead-font-size;
+        }
+        
+    }
+
+    &.case-study-cover {
+        
+        .wp-block-cover__inner-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+    }
+    
+}
+
+.single-case_study {
+
+    #content {
+        max-width: 960px;
+
+        .wp-block-heading {
+            margin-top:1.5em;
+        }
+
+    }
+}

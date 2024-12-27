@@ -1,0 +1,171 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.entry-meta {
+    font-size: $font-size-sm;
+	color: $text-muted;
+}
+
+.text-white a {
+	color: $white;
+}
+
+.has-large-font-size,
+.lead {
+    line-height: $headings-line-height;
+} 
+
+.has-x-large-font-size, 
+.has-larger-font-size, 
+.has-huge-font-size {
+	line-height: 1;
+}
+
+.is-style-supratitle {
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+    margin-bottom: .5em;
+    font-weight: $font-weight-base;
+    color: $body-color;
+}
+
+.post-visibility-status {
+    font-weight: $font-weight-base;
+    color: $text-muted;
+}
+
+// ul.wp-block-list {
+//     padding-left: 0;
+
+//     li {
+//         font-size: $font-size-base * 1.125;
+//         margin-bottom: $spacer * .25;
+//         background: url('../img/icono-check.svg') no-repeat left top transparent;
+//         list-style-type: none;
+//         padding-left: 2.5rem;
+//         min-height: 2rem;
+//     }
+
+// }
+
+h1, .h1 {
+
+}
+
+h2, .h2 {
+
+}
+
+h3, .h3 {
+
+}
+
+h4, .h4 {
+
+}
+
+h5, .h5 {
+
+}
+
+h6, .h6 {
+
+}
+
+.display-1 {
+
+}
+
+.display-2 {
+
+}
+
+.display-3 {
+
+}
+
+.display-4 {
+
+}
+
+small,
+.small {
+    line-height: $headings-line-height;
+}
+
+mark,
+.mark {
+
+}
+
+blockquote,
+.blockquote,
+.wp-block-quote {
+    font-style: italic;
+    font-size: $font-size-base * 1.375;
+}
+
+@include media-breakpoint-up(lg) {
+
+    .display-1 {
+
+    }
+    
+    h1, .h1 {
+
+    }
+    
+    h2, .h2 {
+
+    }
+    
+    h3, .h3 {
+
+    }
+    
+    h4, .h4 {
+
+    }
+
+    h5, .h5 {
+
+    }
+
+    h6, .h6 {
+
+    }
+
+    .display-1 {
+
+    }
+    
+    .display-2 {
+    
+    }
+    
+    .display-3 {
+    
+    }
+    
+    .display-4 {
+    
+    }
+    
+}
+
+#search-wrapper,
+#error-404-wrapper {
+    padding-top: $spacer*4;
+}
+
+.help-superindex {
+    display: inline-block;
+    border: 1px solid;
+    border-radius: $border-radius-pill;
+    padding: 1px;
+    line-height: 1;
+    min-width: 1rem;
+    text-align: center;
+}

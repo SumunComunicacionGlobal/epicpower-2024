@@ -1,0 +1,13 @@
+.tags-links {
+    display: block;
+    margin-top: $grid-gutter-width*2;
+    color: $text-muted;
+
+    a {
+        margin-left: $spacer/2;
+        border: $border-width solid;
+        padding: $btn-padding-y-sm $btn-padding-x-sm;
+        border-radius: $border-radius-pill;
+    }
+
+}

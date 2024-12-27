@@ -1,0 +1,292 @@
+.woocommerce {
+    
+    form .form-row {
+        display: block;
+    }
+
+    .woocommerce-result-count {
+        font-size: $font-size-sm;
+        margin-top: $spacer;
+    }
+
+}
+
+.coupon {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $spacer;
+
+    &:before,
+    &:after {
+        content: none !important;
+    }
+}
+
+div.product div.summary + * {
+    clear: both;
+}
+
+#add_payment_method table.cart td.actions .coupon .input-text, 
+.woocommerce-cart table.cart td.actions .coupon .input-text, 
+.woocommerce-checkout table.cart td.actions .coupon .input-text {
+    padding: $input-padding-y $input-padding-x;
+}
+
+// add spinner animation on add to cart button
+.woocommerce .add_to_cart_button {
+    position: relative;
+    padding-right: calc( #{$btn-padding-x} + 20px + #{$spacer*.5} );
+
+    &:after {
+        position: absolute;
+        right: $btn-padding-x;
+        top: 50%;
+        margin-top: -10px;
+        width: 20px;
+        content: url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd'%3E%3Cpath d='M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z'/%3E%3C/svg%3E");    }
+
+    &.loading {
+        overflow: hidden;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: $btn-padding-x;
+            width: 20px;
+            height: 20px;
+            margin-top: -10px;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-top-color: $primary;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+    }
+
+    // add check icon on add to cart button when product is added. Use svg icon
+    &.added {
+
+        &:after {
+            content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>');
+        }
+        
+    }
+    
+}
+
+.woocommerce ul.products,
+.woocommerce-page ul.products {
+
+    li.product {
+        margin: 0 $spacer $spacer 0;
+        width: calc( 100% / 4 - #{$spacer*3/4} );
+
+        &.last {
+            margin-right: 0 !important;
+        }
+
+    }
+    
+    &.columns-3 li.product {
+        margin: 0 $spacer $spacer 0;
+        width: calc( 100% / 3 - #{$spacer*2/3} );
+    }
+
+    &[class*=columns-] li.product {
+
+        @media (max-width: 768px) {
+            width: calc( 100% / 2 - #{$spacer/2} );
+            margin-right: 0;
+        }
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+         }
+ 
+ 
+    }
+
+}
+
+.comment-notes,
+.woocommerce-noreviews {
+    color: $text-muted;
+}
+
+#commentform {
+    margin-top: $spacer;
+
+    @include media-breakpoint-up(md) {
+        
+        display: flex;
+        flex-wrap: wrap;
+
+        > * {
+            flex: 0 0 100%;
+
+            &.comment-form-author,
+            &.comment-form-email {
+                flex: 0 0 calc( 50% - #{$grid-gutter-width/2} );
+            }
+
+            &.comment-form-author {
+                margin-right: $grid-gutter-width/2 !important;
+            }
+
+        }
+
+    }
+
+}
+
+.woocommerce table.shop_attributes {
+
+    tr {
+        border-left: 0;
+        border-right: 0;
+
+        &:nth-child(even) {
+
+            td,
+            th {
+                background: transparent;
+            }
+        }
+    }
+
+    th {
+        background-color: transparent;
+    }
+
+    td {
+        font-style: normal;
+    }
+}
+
+/* WooCommerce Cart and checkout */
+
+.wc-block-components-button:not(.is-link) {
+    @extend .btn;
+    @extend .btn-primary;
+
+    &:active {
+        background-color: transparent !important;
+    }
+}
+
+.wc-block-components-button.wc-block-checkout__shipping-method-option.wc-block-checkout__shipping-method-option--selected {
+    background-color: hsla(0,0%,7%,.1) !important;
+}
+
+.wc-block-components-radio-control .wc-block-components-radio-control__input:checked:before {
+    background: $primary !important;
+}
+
+.wc-block-components-form .wc-block-components-text-input, 
+.wc-block-components-text-input {
+    
+    label {
+        font-size: $font-size-sm !important;
+        color: $text-muted !important;
+    }
+}
+
+.is-large .wc-block-checkout__sidebar {
+
+    &.is-sticky {
+        top: 84px;
+    }
+}
+
+/* end WooCommerce Cart and checkout */
+
+
+/* WooCommerce account */
+.woocommerce-account,
+.woocommerce-cart,
+.woocommerce-checkout {
+
+    h1 {
+        font-size: $lead-font-size;
+    }
+}
+
+address {
+    border: $border-width solid $border-color;
+    padding: 1rem;
+}
+
+.woocommerce table.my_account_orders .button {
+    margin-right: $spacer*.25;
+    margin-bottom: $spacer*.25;
+}
+
+.woocommerce-MyAccount-navigation {
+    margin-bottom: $spacer*2;
+}
+
+.woocommerce table.my_account_orders td {
+    vertical-align: top;
+    line-height: 1.1;
+}
+/* end WooCommerce account */
+
+
+/* Side cart plugin */
+
+.xoo-wsc-container, 
+.xoo-wsc-slider,
+.xoo-wsc-body {
+    background-color: $body-bg;
+}
+
+.xoo-wsc-sc-subt {
+    font-size: $font-size-sm;
+}
+
+.xoo-wsc-body, 
+.xoo-wsc-body span.amount, 
+.xoo-wsc-body a {
+    color: $body-color;
+}
+
+.xoo-wsc-ft-buttons-cont a.xoo-wsc-ft-btn,
+.xoo-wsc-container .xoo-wsc-btn {
+    background-color: $primary;
+    border-width: $border-width;   
+    border: $border-width solid $primary;
+    text-transform: uppercase;
+    font-size: .75rem;
+    letter-spacing: 1px;
+
+    &:hover {
+        background-color: transparent;
+        border: $border-width solid $primary;
+        color: $primary;
+    }
+
+}
+
+a.xoo-wsc-ft-btn-checkout .amount {
+    font-style: normal;
+}
+
+.xoo-wsc-qty-price,
+.xoo-wsc-qty-price span {
+    font-size: $font-size-sm !important;
+}
+
+/* end Side cart plugin */
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.added_to_cart {
+    font-size: $font-size-sm;
+}

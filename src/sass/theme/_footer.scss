@@ -1,0 +1,19 @@
+#wrapper-prefooter {
+	background-color: $light;
+}
+
+#wrapper-certifications {
+
+	.wp-block-image {
+		margin-bottom: 0;
+	}
+
+	img {
+		border-radius: $border-radius;
+	}
+
+	.is-layout-flex {
+		gap: $grid-gutter-width;
+	}
+
+}

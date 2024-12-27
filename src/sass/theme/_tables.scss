@@ -1,0 +1,38 @@
+.wp-block-table {
+
+	table {
+		margin-bottom: 0;
+	}
+
+	&:not(.is-style-stripes) {
+		tr {
+			border-bottom: 1px solid $gray-300;
+
+			&:first-child {
+				border-top: 1px solid $gray-300;
+			}
+		}
+	}
+
+	&.is-style-stripes {
+
+		tr,
+		td,
+		th {
+			border: 0;
+		}
+	}
+
+}
+
+table {
+
+	tr {
+		border: 1px solid transparentize($body-color, .8);
+	}
+
+	th {
+		background-color: $light;
+	}
+
+}

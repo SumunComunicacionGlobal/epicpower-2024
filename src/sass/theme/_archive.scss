@@ -1,0 +1,17 @@
+.hfeed  article,
+.hfeed-post {
+
+	.wp-post-image {
+		margin-bottom: $spacer;
+	}
+
+}
+
+.post-navigation {
+	margin-top: $spacer * 2;
+
+	.nav-links {
+		font-weight: $font-weight-bold;
+	}
+
+}

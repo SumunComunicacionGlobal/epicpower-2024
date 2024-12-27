@@ -1,0 +1,57 @@
+#crmWebToEntityForm,
+.crmWebToEntityForm {
+    padding: 0 !important;
+    background-color: transparent !important;
+    color: $body-color !important;
+
+    .zcwf_privacy_txt {
+        color: $body-color !important;
+    }
+
+    textarea,
+    select,
+    input[type="text"] {
+        @extend .form-control;
+        border: 2px solid $primary !important;
+    }
+
+    input {
+
+        &[type="reset"] {
+            // display: none;
+        }
+
+        &[type="submit"],
+        &[type="reset"] {
+            @extend .btn;
+            @extend .btn-outline-primary;
+            max-width: unset;
+            margin-bottom: $spacer;
+        }
+    }
+}
+
+#wrapper-footer-full,
+.bg-primary {
+
+    #crmWebToEntityForm,
+    .crmWebToEntityForm {
+        color: $white !important;
+
+        .zcwf_privacy_txt,
+        label {
+            color: $white !important;
+        }
+
+        input {
+
+            &[type="submit"],
+            &[type="reset"] {
+                color: $white;
+                border-color: $white;
+            }
+
+        }
+
+    }
+}
