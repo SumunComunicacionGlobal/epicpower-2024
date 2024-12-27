@@ -224,7 +224,7 @@ function smn_get_product_excerpt( $product = null, $detail_field_keys = false ) 
 		}
 
 		if ( $t ) {
-			$r .= '<div class="datos-tecnicos mb-3">' . $t . '</div>';
+			$r .= '<div class="datos-tecnicos mb-3">' . $t . '</div>'; 
 		}
 	}
 
