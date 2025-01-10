@@ -270,34 +270,34 @@ body.understrap-no-sidebar {
 
     }
 
-    .lwptoc_itemWrap {
+}
+
+body.page .lwptoc_itemWrap {
         
-        @include media-breakpoint-up(md) {
-            display: flex;
-            flex-wrap: wrap;
-            gap: $spacer;
+    @include media-breakpoint-up(md) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $spacer;
 
-            .lwptoc_item {
-                flex: 0 0 calc( 50% - #{$spacer} );
-            }
+        .lwptoc_item {
+            flex: 0 0 calc( 50% - #{$spacer} );
         }
-
-        @include media-breakpoint-up(lg) {
-            .lwptoc_item {
-                flex: 0 0 calc( 33.3333% - #{$spacer} );
-            }
-        }
-
-        @include media-breakpoint-up(xl) {
-            .lwptoc_item {
-                flex: 0 0 calc( 25% - #{$spacer} );
-            }
-            
-        }
-
-        
-
     }
+
+    @include media-breakpoint-up(lg) {
+        .lwptoc_item {
+            flex: 0 0 calc( 33.3333% - #{$spacer} );
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .lwptoc_item {
+            flex: 0 0 calc( 25% - #{$spacer} );
+        }
+        
+    }
+
+    
 
 }
 

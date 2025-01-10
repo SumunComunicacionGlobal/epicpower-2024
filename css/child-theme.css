@@ -18735,23 +18735,24 @@ body.understrap-no-sidebar .alignwide {
   border: 0;
   padding: 0;
 }
+
 @media (min-width: 783px) {
-  .lwptoc .lwptoc_itemWrap {
+  body.page .lwptoc_itemWrap {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
   }
-  .lwptoc .lwptoc_itemWrap .lwptoc_item {
+  body.page .lwptoc_itemWrap .lwptoc_item {
     flex: 0 0 calc( 50% - 1rem );
   }
 }
 @media (min-width: 992px) {
-  .lwptoc .lwptoc_itemWrap .lwptoc_item {
+  body.page .lwptoc_itemWrap .lwptoc_item {
     flex: 0 0 calc( 33.3333% - 1rem );
   }
 }
 @media (min-width: 1400px) {
-  .lwptoc .lwptoc_itemWrap .lwptoc_item {
+  body.page .lwptoc_itemWrap .lwptoc_item {
     flex: 0 0 calc( 25% - 1rem );
   }
 }
