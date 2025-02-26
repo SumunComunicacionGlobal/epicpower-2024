@@ -119,7 +119,7 @@ function smn_get_navbar_class() {
 
 	} else {
 
-		$navbar_class = 'bg-light navbar-light';
+		$navbar_class = 'bg-primary-400 navbar-dark';
 
 		if ( is_page() ) {
 
