@@ -33,7 +33,7 @@ $background_class = 'has-background-dim-100';
 			
 				<header class="entry-header">
 
-					<h3 class="h4 entry-title text-white"><a class="stretched-link" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark"><?php echo $title; ?></a></h3>
+					<p class="h4 entry-title text-white"><a class="stretched-link" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark"><?php echo $title; ?></a></p>
 
 				</header><!-- .entry-header -->
 
