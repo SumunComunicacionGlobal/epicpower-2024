@@ -62,7 +62,7 @@ global $post;
 
 		<?php if ( $product_excerpt ) : ?>
 
-		<div class="row mt-5">
+		<div class="row my-5">
 			<div class="col-md-6 col-lg-7">
 				<?php if ( isset( $product_excerpt ) ) {
 					echo '<h2 class="h4">' . sprintf( __( '%s overview', 'epicpower' ), get_the_title() ) . '</h2>';
