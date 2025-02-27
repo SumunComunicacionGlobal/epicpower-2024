@@ -161,7 +161,10 @@ if ($q->have_posts()) {
 										<?php echo smn_get_product_links(); ?>
 									</div>
 									<div class="col-md-6 mb-3 text-end">
-										<a href="<?php echo $link; ?>" class="btn btn-outline-primary"><?php _e( 'Contact sales', 'epicpower' ); ?></a>
+										<div class="btn-toolbar">
+											<a href="<?php echo $link; ?>" class="me-1 btn btn-sm btn-outline-primary"><?php _e( 'Contact sales', 'epicpower' ); ?></a>
+											<a href="<?php the_permalink(); ?>" class="btn btn-sm btn-primary"><?php _e( 'Product specs', 'epicpower' ); ?></a>
+										</div>
 									</div>
 								</div>
 
