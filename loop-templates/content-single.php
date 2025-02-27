@@ -54,6 +54,12 @@ global $post;
 
 		} ?>
 
+		<?php 
+		if ( shortcode_exists( 'lwptoc' ) ) {
+			echo do_shortcode( '[lwptoc]' );
+		}
+		?>
+
 		<div class="row">
 			<div class="col-md-6 col-lg-7">
 				<?php if ( isset( $product_excerpt ) ) {
