@@ -8,6 +8,8 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 $post_type = get_post_type();
+
+global $post;
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
@@ -44,6 +46,24 @@ $post_type = get_post_type();
 			echo '<p class="lead"><a href="'.get_the_permalink( $datasheet_downloads[0] ).'" title="'.__( 'Download datasheet', 'epicpower' ).'" class="read-more" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> '.get_the_title( $datasheet_downloads[0] ).'</a></p>';
 		}
 		?>
+
+		<?php if ( is_singular( 'product' ) ) {
+
+			$detail_field_keys = get_field( 'detail_field_keys' );
+			$product_excerpt = smn_get_product_excerpt( $post, $detail_field_keys );
+
+		} ?>
+
+		<div class="row">
+			<div class="col-md-6 col-lg-7">
+				<?php if ( isset( $product_excerpt ) ) {
+					echo $product_excerpt;
+				} ?>
+			</div>
+			<div class="col-md-6 col-lg-5">
+				<?php echo get_the_post_thumbnail( $post->ID, 'large', array('class' => 'img-fluid') ); ?>
+			</div>
+		</div>
 
 
 		<?php the_content(); ?>
