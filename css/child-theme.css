@@ -183,8 +183,10 @@ p {
 }
 
 abbr[title] {
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
+  -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 
@@ -2172,6 +2174,8 @@ progress {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   border-radius: 0.2rem;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
@@ -2223,6 +2227,10 @@ progress {
 .crmWebToEntityForm input[type=text]::-webkit-date-and-time-value {
   height: 1.5em;
 }
+.form-control::-moz-placeholder, .facetwp-search::-moz-placeholder, #crmWebToEntityForm textarea::-moz-placeholder, #crmWebToEntityForm select::-moz-placeholder, #crmWebToEntityForm input[type=text]::-moz-placeholder, .crmWebToEntityForm textarea::-moz-placeholder, .crmWebToEntityForm select::-moz-placeholder, .crmWebToEntityForm input[type=text]::-moz-placeholder {
+  color: #535057;
+  opacity: 1;
+}
 .form-control::placeholder, .facetwp-search::placeholder, #crmWebToEntityForm textarea::placeholder,
 #crmWebToEntityForm select::placeholder,
 #crmWebToEntityForm input[type=text]::placeholder,
@@ -2249,6 +2257,7 @@ progress {
 .crmWebToEntityForm input[type=text]::file-selector-button {
   padding: 0.85rem 1.25rem;
   margin: -0.85rem -1.25rem;
+  -webkit-margin-end: 1.25rem;
   margin-inline-end: 1.25rem;
   color: #191733;
   background-color: #e6e6e6;
@@ -2307,6 +2316,7 @@ progress {
 .form-control-sm::file-selector-button {
   padding: 0.35rem 0.75rem;
   margin: -0.35rem -0.75rem;
+  -webkit-margin-end: 0.75rem;
   margin-inline-end: 0.75rem;
 }
 
@@ -2319,6 +2329,7 @@ progress {
 .form-control-lg::file-selector-button {
   padding: 0.75rem 1.25rem;
   margin: -0.75rem -1.25rem;
+  -webkit-margin-end: 1.25rem;
   margin-inline-end: 1.25rem;
 }
 
@@ -2374,6 +2385,8 @@ textarea.form-control-lg {
   border-radius: 0.2rem;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2452,7 +2465,10 @@ textarea.form-control-lg {
   background-position: center;
   background-size: contain;
   border: 1px solid rgba(0, 0, 0, 0.25);
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
+  -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
 .form-check-input[type=checkbox] {
@@ -2551,6 +2567,8 @@ textarea.form-control-lg {
   height: 1.4rem;
   padding: 0;
   background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 .form-range:focus {
@@ -2573,11 +2591,14 @@ textarea.form-control-lg {
   border: 0;
   border-radius: 1rem;
   box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.1);
+  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-appearance: none;
   appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
   .form-range::-webkit-slider-thumb {
+    -webkit-transition: none;
     transition: none;
   }
 }
@@ -2601,11 +2622,14 @@ textarea.form-control-lg {
   border: 0;
   border-radius: 1rem;
   box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.1);
+  -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -moz-appearance: none;
   appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
   .form-range::-moz-range-thumb {
+    -moz-transition: none;
     transition: none;
   }
 }
@@ -2678,6 +2702,9 @@ textarea.form-control-lg {
 .form-floating > .form-control-plaintext {
   padding: 1rem 1.25rem;
 }
+.form-floating > .form-control::-moz-placeholder, .form-floating > .facetwp-search::-moz-placeholder, #crmWebToEntityForm .form-floating > textarea::-moz-placeholder, #crmWebToEntityForm .form-floating > select::-moz-placeholder, #crmWebToEntityForm .form-floating > input[type=text]::-moz-placeholder, .crmWebToEntityForm .form-floating > textarea::-moz-placeholder, .crmWebToEntityForm .form-floating > select::-moz-placeholder, .crmWebToEntityForm .form-floating > input[type=text]::-moz-placeholder, .form-floating > .form-control-plaintext::-moz-placeholder {
+  color: transparent;
+}
 .form-floating > .form-control::placeholder, .form-floating > .facetwp-search::placeholder, #crmWebToEntityForm .form-floating > textarea::placeholder,
 #crmWebToEntityForm .form-floating > select::placeholder,
 #crmWebToEntityForm .form-floating > input[type=text]::placeholder,
@@ -2686,6 +2713,10 @@ textarea.form-control-lg {
 .crmWebToEntityForm .form-floating > input[type=text]::placeholder,
 .form-floating > .form-control-plaintext::placeholder {
   color: transparent;
+}
+.form-floating > .form-control:not(:-moz-placeholder-shown), .form-floating > .facetwp-search:not(:-moz-placeholder-shown), #crmWebToEntityForm .form-floating > textarea:not(:-moz-placeholder-shown), #crmWebToEntityForm .form-floating > select:not(:-moz-placeholder-shown), #crmWebToEntityForm .form-floating > input[type=text]:not(:-moz-placeholder-shown), .crmWebToEntityForm .form-floating > textarea:not(:-moz-placeholder-shown), .crmWebToEntityForm .form-floating > select:not(:-moz-placeholder-shown), .crmWebToEntityForm .form-floating > input[type=text]:not(:-moz-placeholder-shown), .form-floating > .form-control-plaintext:not(:-moz-placeholder-shown) {
+  padding-top: 1.625rem;
+  padding-bottom: 0.625rem;
 }
 .form-floating > .form-control:focus, .form-floating > .facetwp-search:focus, #crmWebToEntityForm .form-floating > textarea:focus,
 #crmWebToEntityForm .form-floating > select:focus,
@@ -2717,6 +2748,10 @@ textarea.form-control-lg {
 .facetwp-type-fselect .form-floating > .fs-label-wrap {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
+}
+.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label, .form-floating > .facetwp-search:not(:-moz-placeholder-shown) ~ label, #crmWebToEntityForm .form-floating > textarea:not(:-moz-placeholder-shown) ~ label, #crmWebToEntityForm .form-floating > select:not(:-moz-placeholder-shown) ~ label, #crmWebToEntityForm .form-floating > input[type=text]:not(:-moz-placeholder-shown) ~ label, .crmWebToEntityForm .form-floating > textarea:not(:-moz-placeholder-shown) ~ label, .crmWebToEntityForm .form-floating > select:not(:-moz-placeholder-shown) ~ label, .crmWebToEntityForm .form-floating > input[type=text]:not(:-moz-placeholder-shown) ~ label {
+  opacity: 0.65;
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
 .form-floating > .form-control:focus ~ label, .form-floating > .facetwp-search:focus ~ label, #crmWebToEntityForm .form-floating > textarea:focus ~ label,
 #crmWebToEntityForm .form-floating > select:focus ~ label,
@@ -3261,6 +3296,8 @@ textarea.form-control-lg {
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
   user-select: none;
   border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
   border-radius: var(--bs-btn-border-radius);
@@ -6369,6 +6406,8 @@ fieldset:disabled .crmWebToEntityForm input[type=reset],
 }
 .btn-close:disabled, .btn-close.disabled {
   pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
   user-select: none;
   opacity: 0.25;
 }
@@ -6415,6 +6454,7 @@ fieldset:disabled .crmWebToEntityForm input[type=reset],
   --bs-toast-zindex: 990;
   position: absolute;
   z-index: var(--bs-toast-zindex);
+  width: -moz-max-content;
   width: max-content;
   max-width: 100%;
   pointer-events: none;
@@ -7022,6 +7062,7 @@ fieldset:disabled .crmWebToEntityForm input[type=reset],
   float: left;
   width: 100%;
   margin-right: -100%;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transition: transform 0.6s ease-in-out;
 }
@@ -7856,13 +7897,16 @@ fieldset:disabled .crmWebToEntityForm input[type=reset],
   }
 }
 .placeholder-wave {
+  -webkit-mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
   mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
+  -webkit-mask-size: 200% 100%;
   mask-size: 200% 100%;
   animation: placeholder-wave 2s linear infinite;
 }
 
 @keyframes placeholder-wave {
   100% {
+    -webkit-mask-position: -200% 0%;
     mask-position: -200% 0%;
   }
 }
@@ -10087,14 +10131,20 @@ fieldset:disabled .crmWebToEntityForm input[type=reset],
 }
 
 .user-select-all {
+  -webkit-user-select: all !important;
+  -moz-user-select: all !important;
   user-select: all !important;
 }
 
 .user-select-auto {
+  -webkit-user-select: auto !important;
+  -moz-user-select: auto !important;
   user-select: auto !important;
 }
 
 .user-select-none {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
   user-select: none !important;
 }
 
@@ -14426,6 +14476,8 @@ body {
   border-radius: 0.2rem;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -14737,67 +14789,42 @@ figure.woocommerce-product-gallery__wrapper {
 }
 
 .fa-spin {
-  -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
 }
 
 .fa-pulse {
-  -webkit-animation: fa-spin 1s infinite steps(8);
   animation: fa-spin 1s infinite steps(8);
-}
-
-@-webkit-keyframes fa-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
 }
 @keyframes fa-spin {
   0% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
 .fa-rotate-90 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
 .fa-rotate-180 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
 .fa-rotate-270 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
-  -webkit-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 
 .fa-flip-horizontal {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
-  -webkit-transform: scale(-1, 1);
-  -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 
 .fa-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
-  -webkit-transform: scale(1, -1);
-  -ms-transform: scale(1, -1);
   transform: scale(1, -1);
 }
 
@@ -18498,6 +18525,7 @@ blockquote,
 }
 
 .object-fit-cover {
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -18791,6 +18819,7 @@ table th {
   vertical-align: middle;
   border: 1px solid #212529;
   margin-right: 0.5rem;
+  -moz-appearance: none;
   appearance: none;
   -webkit-appearance: none;
   outline: none;
@@ -19235,6 +19264,8 @@ select.facetwp-dropdown {
 
 .accordion-featured-image {
   aspect-ratio: 16/9;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .woocommerce form .form-row {
@@ -19889,6 +19920,7 @@ hr {
 img.imagen-pagina-hija {
   height: 140px;
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
   margin-bottom: 2rem;
 }
@@ -19963,7 +19995,6 @@ img.imagen-pagina-hija {
   color: #fff;
 }
 .cabecera .contenido-cabecera .contenido-adicional.columnado {
-  -webkit-columns: auto 2;
   -moz-columns: auto 2;
   columns: auto 2;
 }
@@ -20063,24 +20094,7 @@ body:not(.search) h1:after, body:not(.search) .h1:after,
 .wpcf7 {
   max-width: 100% !important;
 }
-
-form ::-webkit-input-placeholder {
-  color: #0064e2 !important;
-  font-style: italic;
-}
-form :-moz-placeholder {
-  color: #0064e2 !important;
-  font-style: italic;
-}
 form ::-moz-placeholder {
-  color: #0064e2 !important;
-  font-style: italic;
-}
-form :-ms-input-placeholder {
-  color: #0064e2 !important;
-  font-style: italic;
-}
-form ::-ms-input-placeholder {
   color: #0064e2 !important;
   font-style: italic;
 }
@@ -20460,18 +20474,15 @@ label {
   }
   #wrapper-footer .footer-widget:nth-child(1) {
     text-align: left;
-    -ms-flex: 0 0 25%;
     flex: 0 0 25%;
     max-width: 25%;
   }
   #wrapper-footer .footer-widget:nth-child(2) {
-    -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
   }
   #wrapper-footer .footer-widget:nth-child(3) {
     text-align: right;
-    -ms-flex: 0 0 25%;
     flex: 0 0 25%;
     max-width: 25%;
   }
@@ -20516,6 +20527,7 @@ label {
 .noticia .wp-post-image {
   margin-bottom: 2rem;
   aspect-ratio: 800/557;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .noticia .noticia-content-wrapper {
@@ -21073,6 +21085,7 @@ article.product-card .product-image-column-inner {
 }
 article.product-card .product-image-column-inner img {
   height: 100%;
+  -o-object-fit: contain;
   object-fit: contain;
 }
 article.product-card .product-content-column-inner {
@@ -21090,6 +21103,7 @@ article.product-card.case_study {
   border: 0;
 }
 article.product-card.case_study .product-image-column-inner img {
+  -o-object-position: top;
   object-position: top;
 }
 
