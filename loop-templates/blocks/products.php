@@ -150,14 +150,23 @@ if ($q->have_posts()) {
 				<div id="collapse<?php echo $product_id; ?>" class="accordion-collapse collapse <?php echo $collapse_class; ?>" aria-labelledby="heading<?php echo $product_id; ?>" data-bs-parent="#productsAccordion">
 					<div class="accordion-body py-5">
 						<div class="row">
-							<div class="col-md-5 col-lg-6 col-xl-7 mb-3">
+							<div class="col-md-5 col-lg-6 mb-3">
 								<?php echo $product_excerpt; ?>
+								<?php edit_post_link(); ?>
 							</div>
-							<div class="col-md-3 col-lg-3 col-xl-2 mb-3">
-								<?php echo smn_get_product_links(); ?>
-							</div>
-							<div class="col-md-4 col-lg-3 col-xl-3 mb-3 text-end">
-								<a href="<?php echo $link; ?>" class="btn btn-outline-primary"><?php _e( 'Contact sales', 'epicpower' ); ?></a>
+							<div class="col-md-7 col-lg-6 mb-3">
+								
+								<div class="row">
+									<div class="col-md-6 mb-3">
+										<?php echo smn_get_product_links(); ?>
+									</div>
+									<div class="col-md-6 mb-3 text-end">
+										<a href="<?php echo $link; ?>" class="btn btn-outline-primary"><?php _e( 'Contact sales', 'epicpower' ); ?></a>
+									</div>
+								</div>
+
+								<?php the_post_thumbnail(); ?>
+
 							</div>
 						</div>
 

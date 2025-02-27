@@ -219,12 +219,12 @@ function smn_get_product_excerpt( $product = null, $detail_field_keys = false ) 
 					$field_value = '<a href="#modal-converters-sizes-guide" data-bs-toggle="modal">'. $field_value . $superindex .'</a>';
 				}
 
-				$t .= '<div class="d-flex py-2 border-bottom flex-column flex-lg-row justify-content-between"><span class="text-muted me-2">' . esc_html($label) . ':</span> <span class="text-lg-end">' . $field_value . '</span></div>';
+				$t .= '<div class="d-flex py-2 border-bottom flex-column flex-lg-row justify-content-between"><span class="me-2">' . esc_html($label) . ':</span> <span class="text-lg-end">' . $field_value . '</span></div>';
 			}
 		}
 
 		if ( $t ) {
-			$r .= '<div class="datos-tecnicos mb-3">' . $t . '</div>'; 
+			$r .= '<div class="datos-tecnicos mb-3 small">' . $t . '</div>'; 
 		}
 	}
 
