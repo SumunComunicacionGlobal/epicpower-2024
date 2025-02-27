@@ -165,7 +165,7 @@ if ($q->have_posts()) {
 									</div>
 								</div>
 
-								<?php the_post_thumbnail(); ?>
+								<?php the_post_thumbnail( 'medium_large', array( 'class' => 'accordion-featured-image' ) ); ?>
 
 							</div>
 						</div>
