@@ -548,7 +548,7 @@ add_action('manage_posts_custom_column', 'epicpower_columns_content', 10, 2);
 add_action('manage_pages_custom_column', 'epicpower_columns_content', 10, 2);
 function epicpower_columns_head($defaults) {
 	// $defaults = array('featured_image' => 'Imagen') + $defaults;
-    $defaults['featured_image'] = 'Imagen';
+    // $defaults['featured_image'] = 'Imagen';
     $defaults['excerpt'] = 'Resumen';
 
     return $defaults;
