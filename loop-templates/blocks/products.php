@@ -165,8 +165,8 @@ if ($q->have_posts()) {
 							</div>
 							<div class="col-md-6">
 								<div class="btn-toolbar justify-content-end">
-									<a href="<?php echo $link; ?>" class="me-1 btn btn-sm btn-outline-primary"><?php _e( 'Contact sales', 'epicpower' ); ?></a>
-									<!-- <a href="<?php the_permalink(); ?>" class="btn btn-sm btn-primary"><?php _e( 'Product specs', 'epicpower' ); ?></a> -->
+									<a href="<?php echo $link; ?>" class="me-1 btn btn-outline-primary"><?php _e( 'Contact sales', 'epicpower' ); ?></a>
+									<!-- <a href="<?php the_permalink(); ?>" class="btn btn-primary"><?php _e( 'Product specs', 'epicpower' ); ?></a> -->
 								</div>
 							</div>
 						</div>
