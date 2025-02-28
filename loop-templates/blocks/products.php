@@ -151,25 +151,23 @@ if ($q->have_posts()) {
 					<div class="accordion-body py-5">
 						<div class="row">
 							<div class="col-md-5 col-lg-6 mb-3">
-								<?php echo $product_excerpt; ?>
 								<?php edit_post_link(); ?>
+								<?php echo $product_excerpt; ?>
 							</div>
 							<div class="col-md-7 col-lg-6 mb-3">
-								
-								<div class="row">
-									<div class="col-md-6 mb-3">
-										<?php echo smn_get_product_links(); ?>
-									</div>
-									<div class="col-md-6 mb-3 text-end">
-										<div class="btn-toolbar">
-											<a href="<?php echo $link; ?>" class="me-1 btn btn-sm btn-outline-primary"><?php _e( 'Contact sales', 'epicpower' ); ?></a>
-											<a href="<?php the_permalink(); ?>" class="btn btn-sm btn-primary"><?php _e( 'Product specs', 'epicpower' ); ?></a>
-										</div>
-									</div>
-								</div>
-
 								<?php the_post_thumbnail( 'medium_large', array( 'class' => 'accordion-featured-image' ) ); ?>
+							</div>
+						</div>
 
+						<div class="row align-items-center">
+							<div class="col-md-6">
+								<?php echo smn_get_product_links(); ?>
+							</div>
+							<div class="col-md-6">
+								<div class="btn-toolbar justify-content-end">
+									<a href="<?php echo $link; ?>" class="me-1 btn btn-sm btn-outline-primary"><?php _e( 'Contact sales', 'epicpower' ); ?></a>
+									<!-- <a href="<?php the_permalink(); ?>" class="btn btn-sm btn-primary"><?php _e( 'Product specs', 'epicpower' ); ?></a> -->
+								</div>
 							</div>
 						</div>
 

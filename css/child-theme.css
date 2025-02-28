@@ -19263,7 +19263,7 @@ select.facetwp-dropdown {
 }
 
 .accordion-featured-image {
-  aspect-ratio: 16/9;
+  aspect-ratio: 3/2;
   -o-object-fit: cover;
   object-fit: cover;
 }
