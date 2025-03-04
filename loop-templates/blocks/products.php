@@ -157,7 +157,7 @@ if ($q->have_posts()) {
 								<?php echo $product_excerpt; ?>
 							</div>
 
-							<div class="col-md-6 col-lg-7 mb-3">
+							<div class="col-md-6 col-lg-7 col-xl-6 offset-xl-1 mb-3">
 
 								<div class="row">
 									<div class="col-md-6">
