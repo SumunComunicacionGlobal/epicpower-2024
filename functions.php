@@ -608,42 +608,42 @@ function add_converters_sizes_modal_to_footer() {
 }
 
 
-function get_datos_tecnicos_html( $text_field = false ) {
+// function get_datos_tecnicos_html( $text_field = false ) {
 
-    if (!$text_field) {
-        $text_field = get_post_meta( get_the_ID(), 'datos_tecnicos', true );
-    }
-    if($text_field) {
+//     if (!$text_field) {
+//         $text_field = get_post_meta( get_the_ID(), 'datos_tecnicos', true );
+//     }
+//     if($text_field) {
 
-        $exclude_info = array(
-            'V high side',
-            'V low side',
-            'Nominal current',
-            'Nominal power',
-        );
+//         $exclude_info = array(
+//             'V high side',
+//             'V low side',
+//             'Nominal current',
+//             'Nominal power',
+//         );
         
-        $datos_tecnicos = explode(PHP_EOL, $text_field);
-        $datos_tecnicos_html = '';
-        foreach ($datos_tecnicos as $row) {
+//         $datos_tecnicos = explode(PHP_EOL, $text_field);
+//         $datos_tecnicos_html = '';
+//         foreach ($datos_tecnicos as $row) {
 
-            $dato_array = explode(':', $row);
+//             $dato_array = explode(':', $row);
 
-            foreach ($exclude_info as $exclude) {
-                if (stripos(trim($dato_array[0]), $exclude) !== false) {
-                    continue 2;
-                }
-            }
+//             foreach ($exclude_info as $exclude) {
+//                 if (stripos(trim($dato_array[0]), $exclude) !== false) {
+//                     continue 2;
+//                 }
+//             }
 
-            $datos_tecnicos_html .= '<div class="row-wrapper '.ANIMATION_CLASS.'"><div class="row"><div class="col-6 data-label">'.$dato_array[0].'</div><div class="col-6 data-value">'.$dato_array[1].'</div></div></div>';
-        }
+//             $datos_tecnicos_html .= '<div class="row-wrapper '.ANIMATION_CLASS.'"><div class="row"><div class="col-6 data-label">'.$dato_array[0].'</div><div class="col-6 data-value">'.$dato_array[1].'</div></div></div>';
+//         }
 
-        $tabla = '<div class="technical-table">' . $datos_tecnicos_html . '</div>';
+//         $tabla = '<div class="technical-table">' . $datos_tecnicos_html . '</div>';
     
-        return $tabla;
+//         return $tabla;
 
-    }
+//     }
 
-}
+// }
 
 function get_archive_filter( $taxonomy = 'industry', $post_type = 'case_study' ) {
 

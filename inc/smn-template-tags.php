@@ -180,14 +180,14 @@ function smn_get_product_excerpt( $product = null, $detail_field_keys = false ) 
 	}
 
 	$subtitulo = get_field('subtitulo', $product);
-	$datos_tecnicos = get_field('datos_tecnicos', $product);
-	$datos_tecnicos_html = get_datos_tecnicos_html( $datos_tecnicos );
+	// $datos_tecnicos = get_field('datos_tecnicos', $product);
+	// $datos_tecnicos_html = get_datos_tecnicos_html( $datos_tecnicos );
 
 	$r = '';
 
 	if ($subtitulo) $r .= '<p class="entry-subtitle fw-bold">'.$subtitulo.'</p>';
 	if ($product->post_excerpt) $r .= '<div class="small mb-3">' . wpautop( $post->post_excerpt ) . '</div>';
-	if ($datos_tecnicos) $r .= '<div class="mb-3">' . $datos_tecnicos_html . '</div>';
+	// if ($datos_tecnicos) $r .= '<div class="mb-3">' . $datos_tecnicos_html . '</div>';
 
 	$fields = acf_get_fields(DATOS_TECNICOS_ID);
 
