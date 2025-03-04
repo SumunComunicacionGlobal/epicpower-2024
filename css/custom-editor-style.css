@@ -27218,9 +27218,14 @@ select.facetwp-dropdown {
 }
 
 .accordion-featured-image {
+  max-height: 220px;
+  width: auto;
   aspect-ratio: 3/2;
   -o-object-fit: cover;
   object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .woocommerce form .form-row {

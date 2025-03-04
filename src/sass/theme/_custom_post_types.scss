@@ -68,6 +68,11 @@
 }
 
 .accordion-featured-image {
+    max-height: 220px;
+    width: auto;
     aspect-ratio: 3/2;
     object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
