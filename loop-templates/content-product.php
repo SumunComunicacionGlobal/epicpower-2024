@@ -10,8 +10,8 @@ defined( 'ABSPATH' ) || exit;
 global $post;
 $post_meta = get_post_meta( get_the_ID() );
 $subtitulo = (isset($post_meta['subtitulo'])) ? $post_meta['subtitulo'][0] : false;
-$datos_tecnicos = (isset($post_meta['datos_tecnicos'])) ? $post_meta['datos_tecnicos'][0] : false;
-$datos_tecnicos_html = get_datos_tecnicos_html( $datos_tecnicos );
+// $datos_tecnicos = (isset($post_meta['datos_tecnicos'])) ? $post_meta['datos_tecnicos'][0] : false;
+// $datos_tecnicos_html = get_datos_tecnicos_html( $datos_tecnicos );
 $datasheet_pdf = (isset($post_meta['datasheet_pdf'])) ? $post_meta['datasheet_pdf'][0] : false;
 $datasheet_downloads  = (isset($post_meta['datasheet_downloads'])) ? $post_meta['datasheet_downloads'][0] : false;
 
@@ -71,7 +71,7 @@ if( !$enlace_a_descargas ) {
 
 					if ($subtitulo) echo '<div class="entry-subtitle">'.$subtitulo.'</div>';
 					if ($post->post_excerpt) echo '<div class="small">' . wpautop( $post->post_excerpt ) . '</div>';
-					if ($datos_tecnicos) echo $datos_tecnicos_html;
+					// if ($datos_tecnicos) echo $datos_tecnicos_html;
 					
 					echo '<div class="footer-links">';
 
