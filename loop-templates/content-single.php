@@ -60,25 +60,30 @@ global $post;
 		}
 		?>
 
-		<?php if ( $product_excerpt ) : ?>
+		<?php if ( $product_excerpt ) : 
+			$count_d_flex_occurences = substr_count( $product_excerpt, 'd-flex' );
+			if ( $count_d_flex_occurences > 1 ) :
+			?>
 
-		<div class="product-overview-wrapper border p-4 my-5 rounded-3">
+			<div class="product-overview-wrapper border p-4 my-5 rounded-3">
 
-			<div class="row">
-				<div class="col-md-6 col-lg-7">
-					<?php if ( isset( $product_excerpt ) ) {
-						echo '<h2 class="h4">' . sprintf( __( '%s overview', 'epicpower' ), get_the_title() ) . '</h2>';
-						echo $product_excerpt;
-					} ?>
+				<div class="row">
+					<div class="col-md-6 col-lg-7">
+						<?php if ( isset( $product_excerpt ) ) {
+							echo '<h2 class="h4">' . sprintf( __( '%s overview', 'epicpower' ), get_the_title() ) . '</h2>';
+							echo $product_excerpt;
+						} ?>
+					</div>
+					<div class="col-md-6 col-lg-5">
+						<?php echo get_the_post_thumbnail( $post->ID, 'large', array('class' => 'img-fluid') ); ?>
+					</div>
 				</div>
-				<div class="col-md-6 col-lg-5">
-					<?php echo get_the_post_thumbnail( $post->ID, 'large', array('class' => 'img-fluid') ); ?>
-				</div>
+
 			</div>
-
-		</div>
 		
-		<?php endif; ?>
+			<?php endif; 
+
+		endif; ?>
 
 		<?php the_content(); ?>
 
