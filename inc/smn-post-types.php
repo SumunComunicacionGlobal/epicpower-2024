@@ -389,7 +389,51 @@ if ( ! function_exists('custom_post_type_video_tutorial') ) {
 	}
 	add_action( 'init', 'custom_post_type_video_tutorial', 0 );
 	
+}
+
+if ( ! function_exists('custom_post_type_paper') ) {
+
+	// Register Custom Post Type
+	function custom_post_type_paper() {
+	
+		$labels = array(
+			'name'                  => _x( 'Papers', 'Post Type General Name', 'epicpower' ),
+			'singular_name'         => _x( 'Paper', 'Post Type Singular Name', 'epicpower' ),
+			'menu_name'             => __( 'Papers', 'epicpower-admin' ),
+			'name_admin_bar'        => __( 'Papers', 'epicpower-admin' ),
+			'add_new'               => __( 'Añadir nuevo Paper', 'epicpower-admin' ),
+			'new_item'              => __( 'Nuevo Paper', 'epicpower-admin' ),
+			'edit_item'             => __( 'Editar Paper', 'epicpower-admin' ),
+			'update_item'           => __( 'Actualizar Paper', 'epicpower-admin' ),
+			'view_item'             => __( 'Ver Paper', 'epicpower-admin' ),
+			'view_items'            => __( 'Ver Papers', 'epicpower-admin' ),
+		);
+		$args = array(
+			'label'                 => __( 'Papers', 'epicpower' ),
+			'labels'                => $labels,
+			'supports'              => array( 'title', 'editor', 'custom-fields', 'page-attributes', 'thumbnail' ),
+			'hierarchical'          => false,
+			'public'                => true,
+			'show_ui'               => true,
+			'show_in_menu'          => true,
+			'menu_position'         => 5,
+			'menu_icon'             => 'dashicons-media-document',
+			'show_in_admin_bar'     => false,
+			'show_in_nav_menus'     => false,
+			'can_export'            => true,
+			'has_archive'           => __( 'papers', 'smn' ),
+			'exclude_from_search'   => true,
+			'publicly_queryable'    => true,
+			'capability_type'       => 'post',
+			'show_in_rest'          => true,
+			'taxonomies'            => array(),
+		);
+		register_post_type( 'paper', $args );
+	
 	}
+	add_action( 'init', 'custom_post_type_paper', 0 );
+	
+}
 
 if ( ! function_exists( 'portfolio_category_custom_taxonomy' ) ) {
 
