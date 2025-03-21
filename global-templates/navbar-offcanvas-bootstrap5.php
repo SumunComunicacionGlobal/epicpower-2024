@@ -9,7 +9,7 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-$container = 'container-fluid';
+$container = 'container';
 $navbar_class = smn_get_navbar_class();
 ?>
 
@@ -61,14 +61,14 @@ $navbar_class = smn_get_navbar_class();
 
 		</div><!-- .offcancas-header -->
 
-		<div class="offcanvas-body main-nav-container-2 px-3">
+		<div class="offcanvas-body main-nav-container-2">
 
 			<!-- The WordPress Menu goes here -->
 			<?php
 			wp_nav_menu(
 				array(
 					'theme_location'  => 'primary',
-					'container_class' => 'flex-grow-1 align-items-center',
+					'container_class' => 'container flex-grow-1 align-items-center',
 					'container_id'    => '',
 					'menu_class'      => 'navbar-nav flex-grow-1 mb-4 mb-lg-0',
 					'fallback_cb'     => '',

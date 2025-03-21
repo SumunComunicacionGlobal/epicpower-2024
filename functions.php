@@ -8,12 +8,7 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-if ( isset( $_GET['new_header'] ) ) {
-    define( 'NEW_HEADER', true );
-} else {
-    define( 'NEW_HEADER', false );
-}
-
+define( 'NEW_HEADER', true );
 
 // define( 'COL_CLASSES', 'col-sm-6 col-lg-4 col-xl-3 mb-4 stretch-linked-block' );
 define( 'COL_CLASSES', '' );

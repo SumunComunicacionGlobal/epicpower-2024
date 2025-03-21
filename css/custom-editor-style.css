@@ -27585,11 +27585,6 @@ body {
   overflow-x: hidden;
 }
 
-.container {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
 .scroll-button-wrapper {
   position: absolute;
   left: 0;
