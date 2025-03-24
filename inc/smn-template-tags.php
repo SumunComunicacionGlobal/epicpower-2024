@@ -98,7 +98,7 @@ function smn_breadcrumb() {
 	$r = smn_get_breadcrumb();
 
 	if ( $r ) {
-		echo '<div class="container-fluid">';
+		echo '<div class="container">';
 			echo $r;
 		echo '</div>';
 	}
