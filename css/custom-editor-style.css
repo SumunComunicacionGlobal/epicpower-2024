@@ -27144,9 +27144,6 @@ select.facetwp-dropdown {
     width: 100%;
   }
 }
-.breadcrumb {
-  justify-content: flex-end;
-}
 .breadcrumb p {
   margin-bottom: 0;
 }
