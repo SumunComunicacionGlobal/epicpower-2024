@@ -17813,7 +17813,9 @@ figure.woocommerce-product-gallery__wrapper {
   padding-top: 100px;
 }
 
-body.navbar-transparent #wrapper-navbar + .wrapper, body.has-not-content-padding-top #wrapper-navbar + .wrapper {
+body.navbar-transparent #wrapper-navbar + .wrapper,
+body.navbar-transparent #page-wrapper, body.has-not-content-padding-top #wrapper-navbar + .wrapper,
+body.has-not-content-padding-top #page-wrapper {
   padding-top: 0;
 }
 body.navbar-transparent .entry-content > .alignfull:first-child, body.has-not-content-padding-top .entry-content > .alignfull:first-child {

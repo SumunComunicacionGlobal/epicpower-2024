@@ -30,12 +30,9 @@ body {
   &.navbar-transparent,
   &.has-not-content-padding-top {
 
-    #wrapper-navbar {
-
-      + .wrapper {
-        padding-top: 0;
-      }
-
+    #wrapper-navbar + .wrapper,
+    #page-wrapper {
+      padding-top: 0;
     }
 
     .entry-content > .alignfull:first-child {
