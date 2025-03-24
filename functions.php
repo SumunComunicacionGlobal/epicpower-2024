@@ -15,7 +15,7 @@ define( 'COL_CLASSES', '' );
 define('ANIMATION_CLASS', 'animated fadeInUp duration2 eds-on-scroll eds-animation-paused');
 define('DOWNLOADS_ID', get_theme_mod( 'id_pagina_descargas', 1231 ) );
 define('CONTACT_ID', get_theme_mod( 'id_pagina_contacto', 1235 ) );
-define('DATOS_TECNICOS_ID', get_theme_mod( 'id_datos_tecnicos', 3021 ) );
+define('DATOS_TECNICOS_ID', get_theme_mod( 'id_datos_tecnicos', 'group_5eeb30fcf1cb7' ) );
 define('APPLICATION_NOTES_TERM_ID', get_theme_mod( 'id_application_notes', 31 ) );
 
 $content_width = 1140;

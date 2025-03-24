@@ -81,7 +81,11 @@ if ($q->have_posts()) {
 
 				$field_code = get_post_meta( get_the_ID(), '_' . $field_key, true );
 				$field_object = get_field_object( $field_code );
-				$field_label = $field_object['label'];
+				if ( $field_object) {
+					$field_label = $field_object['label'];
+				} else {
+					$field_label = '-';
+				}
 				$table_header[] = $field_label;
 
 			}
@@ -121,6 +125,7 @@ if ($q->have_posts()) {
 
 			foreach ( $field_keys as $key ) {
 				$field_object = get_field_object( $key, $post );
+				if ( !$field_object ) continue;
 				$value = get_field( $key, $post );
 
 				if ( 'true_false' == $field_object['type'] ) {
