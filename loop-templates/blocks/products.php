@@ -49,7 +49,7 @@ if ($q->have_posts()) {
 		$collapse_button_class = 'collapsed';
 		$collapse_class = '';
 
-		$field_keys = get_field( 'field_keys' );
+		$field_keys = get_field( 'fields_keys' );
 		$detail_field_keys = get_field( 'detail_field_keys' );
 
 		if ( $field_keys ) {
