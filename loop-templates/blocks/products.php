@@ -129,11 +129,6 @@ if ($q->have_posts()) {
 				$value = get_field( $key, $post );
 
 				if ( 'true_false' == $field_object['type'] ) {
-					if ( 1==1 ) :
-						echo '<pre>';
-							print_r ( $field_object );
-						echo '</pre>';
-					endif;
 					if ( $value ) {
 						if ( $field_object['ui_on_text'] ) {
 							$value = $field_object['ui_on_text'];

@@ -211,6 +211,19 @@ function smn_get_product_excerpt( $product = null, $detail_field_keys = false ) 
 			$field_value = get_field($field['name'], $product->ID);
 			
 			if ($field['type'] === 'true_false') {
+				if ($field_value) {
+					if ( $field['ui_on_text'] ) {
+						$field_value = $field['ui_on_text'];
+					} else {
+						$field_value = __('Yes', 'epicpower');
+					}
+				} else {
+					if ( $field['ui_off_text'] ) {
+						$field_value = $field['ui_off_text'];
+					} else {
+						$field_value = __('No', 'epicpower');
+					}
+				}
 				$field_value = $field_value ? __('Yes', 'epicpower') : __('No', 'epicpower');
 			}
 
