@@ -139,7 +139,7 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
  * Load the child theme's text domain
  */
 function add_child_theme_textdomain() {
-	load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
+	// load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
 	load_child_theme_textdomain( 'epicpower', get_stylesheet_directory() . '/languages' );
 	load_child_theme_textdomain( 'smn', get_stylesheet_directory() . '/languages' );
 }
