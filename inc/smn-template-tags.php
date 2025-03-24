@@ -164,7 +164,12 @@ function smn_has_alignfull_first() {
 		return true;
 	}
 
-	if ( isset( $blocks[0] ) && 'core/cover' === $blocks[0]['blockName'] ) {
+	if ( isset( $blocks[0] ) && 
+		(
+			'core/cover' === $blocks[0]['blockName'] ||
+			'nk/awb' === $blocks[0]['blockName']
+		)
+	) {
 		return true;
 	}
 
