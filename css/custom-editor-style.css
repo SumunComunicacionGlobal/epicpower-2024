@@ -27089,13 +27089,13 @@ select.facetwp-dropdown {
   }
   #main-nav.navbar-light #main-menu > li:nth-child(n+4) > .nav-link {
     color: var(--bs-link-color);
-    font-weight: 600;
   }
   #main-nav.navbar-light #main-menu > li:nth-child(n+4) > .nav-link:hover {
     color: var(--bs-link-hover-color);
   }
   #main-nav #main-menu > li:nth-child(n+4) > .nav-link {
     position: relative;
+    font-weight: 600;
   }
   #main-nav #main-menu > li:nth-child(n+4) > .nav-link:before {
     content: "";

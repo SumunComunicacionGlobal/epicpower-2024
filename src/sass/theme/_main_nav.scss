@@ -167,7 +167,6 @@
 
         &.navbar-light #main-menu > li:nth-child(n+4) > .nav-link {
             color: var(--bs-link-color);
-            font-weight: $font-weight-semibold;
 
             &:hover {
                 color: var(--bs-link-hover-color);
@@ -178,6 +177,7 @@
 
             > .nav-link {   
                 position: relative;
+                font-weight: $font-weight-semibold;
 
                 &:before {
                     content: "";
