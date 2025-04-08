@@ -586,7 +586,7 @@ img.imagen-pagina-hija {
 .sdm_post_title {
 	display: none;
 }
-h2.entry-title {
+h2:not(.h5).entry-title {
 	font-size: 1.4rem;
 }
 body:not(.search) h1,

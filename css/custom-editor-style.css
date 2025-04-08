@@ -26493,6 +26493,11 @@ a:hover img, a:hover svg {
   opacity: 0.7;
 }
 
+.paper-thumbnail {
+  width: 4rem;
+  height: auto;
+}
+
 body.understrap-no-sidebar .alignwide {
   margin: 0;
   max-width: 100%;
@@ -28044,7 +28049,7 @@ img.imagen-pagina-hija {
   display: none;
 }
 
-h2.entry-title, .entry-title.is-style-h2, .entry-title.h2 {
+h2:not(.h5).entry-title, .is-style-h2:not(.h5).entry-title, .h2:not(.h5).entry-title {
   font-size: 1.4rem;
 }
 

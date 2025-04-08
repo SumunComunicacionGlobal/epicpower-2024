@@ -41,6 +41,10 @@ switch ( $post_type ) {
 		$col_class = 'col-md-6 col-lg-4';
 		break;
 
+	case 'paper':
+		$col_class = 'col-12';
+		break;
+
 	default:
 		$col_class = 'col-sm-6';
 }
@@ -69,11 +73,13 @@ switch ( $post_type ) {
 
 					<?php if ( $filtrable ) {
 						echo get_archive_filter( $taxonomy_filter, $post_type );
+					} elseif( is_post_type_archive( 'paper' ) ) {
+						echo facetwp_display( 'facet', 'search_papers' );
 					} ?>
 
 					<?php $col_class .= ' animado mb-4'; ?>
 
-					<div class="row filtrable <?php echo $post_type; ?>s">
+					<div class="filtrable <?php echo $post_type; ?>s">
 
 						<?php /* Start the Loop */ ?>
 						<?php while ( have_posts() ) : the_post(); ?>
