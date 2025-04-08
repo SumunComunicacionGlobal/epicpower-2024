@@ -20,6 +20,14 @@ select.facetwp-dropdown {
     @extend .form-control;
 }
 
+.facetwp-type-search {
+
+	.facetwp-input-wrap {
+		width: 100%;
+	}
+
+}
+
 .facetwp-type-dropdown select,
 .facetwp-type-fselect .fs-label-wrap {
 	@extend .form-select;
