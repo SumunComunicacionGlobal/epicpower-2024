@@ -54,12 +54,6 @@ global $post;
 
 		} ?>
 
-		<?php 
-		if ( shortcode_exists( 'lwptoc' ) ) {
-			echo do_shortcode( '[lwptoc]' );
-		}
-		?>
-
 		<?php if ( $product_excerpt ) : 
 			$count_d_flex_occurences = substr_count( $product_excerpt, 'd-flex' );
 			if ( $count_d_flex_occurences > 1 ) :
