@@ -604,6 +604,7 @@ if ( ! function_exists( 'paper_category_custom_taxonomy' ) ) {
 			'show_in_nav_menus'          => true,
 			'show_tagcloud'              => true,
 			'show_in_rest'				 => true,
+			'default_term'          	 => __( 'In English', 'epicpower' ),
 		);
 		register_taxonomy( 'paper_category', array( 'paper' ), $args );
 	
