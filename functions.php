@@ -709,7 +709,7 @@ function get_archive_filter( $taxonomy = 'industry', $post_type = 'case_study' )
                         }
                         var activeItems = jQuery('.filtrable article').parent().not('.disabled');
                         var inactiveItems = jQuery('.filtrable article').parent('.disabled');
-                        jQuery('.filtrable').append(activeItems).append(inactiveItems);
+                        jQuery('.filtrable > .row').append(activeItems).append(inactiveItems);
                     });
                 </script>
 
