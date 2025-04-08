@@ -422,7 +422,7 @@ if ( ! function_exists('custom_post_type_paper') ) {
 			'show_in_nav_menus'     => false,
 			'can_export'            => true,
 			'has_archive'           => __( 'papers', 'smn' ),
-			'exclude_from_search'   => true,
+			'exclude_from_search'   => false,
 			'publicly_queryable'    => true,
 			'capability_type'       => 'post',
 			'show_in_rest'          => true,
