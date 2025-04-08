@@ -568,7 +568,49 @@ add_action( 'init', 'product_category_custom_taxonomy', 0 );
 
 }
 
+if ( ! function_exists( 'paper_category_custom_taxonomy' ) ) {
 
+	// Register Custom Taxonomy
+	function paper_category_custom_taxonomy() {
+	
+		$labels = array(
+			'name'                       => _x( 'Paper Categories', 'Taxonomy General Name', 'epicpower' ),
+			'singular_name'              => _x( 'Paper Category', 'Taxonomy Singular Name', 'epicpower' ),
+			'menu_name'                  => __( 'Categorías de Papers', 'epicpower' ),
+			'all_items'                  => __( 'Todas las Categorías de Papers', 'epicpower' ),
+			'parent_item'                => __( 'Categoría de Paper superior', 'epicpower' ),
+			'parent_item_colon'          => __( 'Categoría de Paper superior:', 'epicpower' ),
+			'new_item_name'              => __( 'Nombre de la nueva categoría', 'epicpower' ),
+			'add_new_item'               => __( 'Añadir nueva categoría', 'epicpower' ),
+			'edit_item'                  => __( 'Editar categoría', 'epicpower' ),
+			'update_item'                => __( 'Actualizar categoría', 'epicpower' ),
+			'view_item'                  => __( 'Ver categoría', 'epicpower' ),
+			'separate_items_with_commas' => __( 'Separar categorías con comas', 'epicpower' ),
+			'add_or_remove_items'        => __( 'Añadir o quitar categorías', 'epicpower' ),
+			'choose_from_most_used'      => __( 'Elegir de entre las más usadas', 'epicpower' ),
+			'popular_items'              => __( 'Categorías populares', 'epicpower' ),
+			'search_items'               => __( 'Buscar categorías', 'epicpower' ),
+			'not_found'                  => __( 'Not found', 'epicpower' ),
+			'no_terms'                   => __( 'No items', 'epicpower' ),
+			'items_list'                 => __( 'Items list', 'epicpower' ),
+			'items_list_navigation'      => __( 'Items list navigation', 'epicpower' ),
+		);
+		$args = array(
+			'labels'                     => $labels,
+			'hierarchical'               => true,
+			'public'                     => true,
+			'show_ui'                    => true,
+			'show_admin_column'          => true,
+			'show_in_nav_menus'          => true,
+			'show_tagcloud'              => true,
+			'show_in_rest'				 => true,
+		);
+		register_taxonomy( 'paper_category', array( 'paper' ), $args );
+	
+	}
+	add_action( 'init', 'paper_category_custom_taxonomy', 0 );
+	
+	}
 
 function wpb_change_title_text( $title ){
      $screen = get_current_screen();
