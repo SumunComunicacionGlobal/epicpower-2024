@@ -728,6 +728,15 @@ function application_notes_shortcode() {
 }
 add_shortcode('application_notes', 'application_notes_shortcode');
 
+function papers_shortcode() {
+	ob_start();
+	get_template_part('global-templates/papers');
+	$r = ob_get_clean();
+
+	return $r;
+}
+add_shortcode('papers', 'papers_shortcode');
+
 function application_notes_filter_shortcode() {
 	ob_start();
 	get_template_part('global-templates/application-notes-filter');

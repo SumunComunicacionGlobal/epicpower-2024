@@ -10,6 +10,7 @@ defined( 'ABSPATH' ) || exit;
 $post_type = get_post_type();
 
 global $post;
+$product_excerpt = false;
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">

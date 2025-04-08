@@ -15,6 +15,7 @@ define( 'COL_CLASSES', '' );
 define('ANIMATION_CLASS', 'animated fadeInUp duration2 eds-on-scroll eds-animation-paused');
 define('DOWNLOADS_ID', get_theme_mod( 'id_pagina_descargas', 1231 ) );
 define('CONTACT_ID', get_theme_mod( 'id_pagina_contacto', 1235 ) );
+define('ACADEMY_ID', get_theme_mod( 'id_pagina_academy', 16586 ) );
 define('DATOS_TECNICOS_ID', get_theme_mod( 'id_datos_tecnicos', 'group_5eeb30fcf1cb7' ) );
 define('APPLICATION_NOTES_TERM_ID', get_theme_mod( 'id_application_notes', 31 ) );
 
@@ -450,6 +451,18 @@ function eipcpower_quitar_categoria_de_miga_de_pan( $crumbs ) {
 
         }
 
+    }
+
+    if ( is_post_type_archive( 'paper' ) || is_singular( 'paper' ) ) {
+        $academy_id = defined( 'ACADEMY_ID' ) ? ACADEMY_ID : false;
+        if ( $academy_id ) {
+            $academy_link = array(
+                'url'  => get_permalink( $academy_id ),
+                'text' => get_the_title( $academy_id ),
+                'id'   => $academy_id,
+            );
+            array_splice( $crumbs, 1, 0, array( $academy_link ) );
+        }
     }
 
     return $crumbs;
