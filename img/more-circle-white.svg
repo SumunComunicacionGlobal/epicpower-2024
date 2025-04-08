@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>more-circle-white@3x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Diseño-IU" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Pagina-tipo-listado" transform="translate(-139.000000, -864.000000)">
+            <g id="Group" transform="translate(111.000000, 836.000000)">
+                <g id="BOTON-MAS-CIRCULO" transform="translate(28.000000, 27.000000)">
+                    <path d="M23.4369,12.7188 C23.4369,19.1908 18.1909,24.4368 11.7179,24.4368 C5.2469,24.4368 -0.0001,19.1908 -0.0001,12.7188 C-0.0001,6.2458 5.2469,0.9998 11.7179,0.9998 C18.1909,0.9998 23.4369,6.2458 23.4369,12.7188" id="Fill-1" fill="#FFFFFF"></path>
+                    <path d="M18.06,11.9688 L12.468,11.9688 L12.468,6.3768 C12.468,5.9628 12.132,5.6268 11.718,5.6268 C11.304,5.6268 10.968,5.9628 10.968,6.3768 L10.968,11.9688 L5.377,11.9688 C4.963,11.9688 4.627,12.3048 4.627,12.7188 C4.627,13.1328 4.963,13.4688 5.377,13.4688 L10.968,13.4688 L10.968,19.0598 C10.968,19.4738 11.304,19.8098 11.718,19.8098 C12.132,19.8098 12.468,19.4738 12.468,19.0598 L12.468,13.4688 L18.06,13.4688 C18.474,13.4688 18.81,13.1328 18.81,12.7188 C18.81,12.3048 18.474,11.9688 18.06,11.9688" id="Fill-4" fill="#009EE2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
