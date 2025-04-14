@@ -76,3 +76,33 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.card {
+
+    &.card-paper {
+
+        .card-body {
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+
+            &.card-body-faded::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100px;
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+            }
+
+        }
+    }
+
+}
+
+.slick-slide > .card-paper .paper-thumbnail {
+    height: 2rem;
+    width: auto;
+    margin-bottom: $paragraph-margin-bottom;
+}

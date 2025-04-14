@@ -28,7 +28,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<?php
 				while ( have_posts() ) {
 					the_post();
-					get_template_part( 'loop-templates/content-single', get_post_type() );
+
+					if ( 'paper' == get_post_type() ) {
+						// Load the content-paper.php template for paper post type.
+						get_template_part( 'loop-templates/content', 'paper' );
+						understrap_post_nav();
+					} else {
+						get_template_part( 'loop-templates/content-single', get_post_type() );
+					}
 					// understrap_post_nav();
 
 					// If comments are open or we have at least one comment, load up the comment template.

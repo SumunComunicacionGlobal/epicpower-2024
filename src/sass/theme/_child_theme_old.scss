@@ -1237,6 +1237,13 @@ span.read-more,
 			margin-left: 1.6rem;
 		}
 	}
+
+	&.text-white {
+
+		&:before {
+			background-color: $white;
+		}
+	}
 }
 .post-type-name, .cat-links a {
 	font-style: italic;
