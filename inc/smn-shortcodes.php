@@ -117,7 +117,8 @@ function listado_shortcode( $atts ) {
 			if ( isset($_GET['product_id']) ) {
 				$product_id = $_GET['product_id'];
 				$product_name = get_the_title( $product_id );
-				$r .= '<p class="lead">' . sprintf( __( 'Showing downloads for %s', 'epicpower' ), '<span class="fw-bold">' . $product_name . '</span>' ) . '</p>';	
+				$r .= '<p class="lead">' . sprintf( __( 'Showing downloads for %s', 'epicpower' ), '<span class="fw-bold">' . $product_name . '</span>' ) . '. '. __( 'Other downloads are shown in a lighter color', 'epicpower' ) .'</p>';
+				$filtro_activo = '<span class="badge bg-light text-dark rounded-pill">'. sprintf( __( 'Related to %s', 'epicpower' ), $product_name ).'</span>' . $filtro_activo;
 			}
 
 			if($filtro_activo) $r .= '<p>' . $filtro_activo . '<a class="badge bg-primary text-white rounded-pill" href="'.get_the_permalink( DOWNLOADS_ID ).'">['.__('View all', 'epicpower').']</a></p>';
