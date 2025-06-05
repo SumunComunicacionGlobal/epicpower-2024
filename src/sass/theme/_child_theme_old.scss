@@ -411,8 +411,12 @@ img.imagen-pagina-hija {
 	margin-bottom: $spacer * 2;
 	// clip-path: polygon( 0 0, 100% 10%, 100% 100%, 0 90% );
 }
-.wp-block-image.logo-award, .widget-title, .comment-reply-title, .search .page-title, .related-content-title {
-	&:after {
+.wp-block-image.logo-award, 
+.widget-title, 
+.comment-reply-title, 
+.search .page-title, 
+.related-content-title {
+	&:before {
 		content: "";
 		position: relative;
 		display: block;
@@ -431,8 +435,8 @@ img.imagen-pagina-hija {
 }
 
 .related-content-title {
-	border-top: 1px solid $primary;
-	padding-top: .5rem;
+	border-bottom: 1px solid;
+	padding-bottom: .5rem;
 }
 // .entry-content ul:not(.blocks-gallery-grid) {
 // 	list-style: none;

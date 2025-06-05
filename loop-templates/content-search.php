@@ -12,17 +12,21 @@ $pto = get_post_type_object( $pt );
 $pt_name = $pto->labels->singular_name;
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<div class="col-12">
 
-	<header class="entry-header">
+	<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-		<?php
-		the_title(
-			sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark"><span>', esc_url( get_permalink() ) ),
-			'</span><span class="post-type-name">'.$pt_name.'</span></a></h2>'
-		);
-		?>
+		<header class="entry-header">
 
-	</header><!-- .entry-header -->
+			<?php
+			the_title(
+				sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark"><span>', esc_url( get_permalink() ) ),
+				'</span><span class="post-type-name">'.$pt_name.'</span></a></h2>'
+			);
+			?>
 
-</article><!-- #post-## -->
+		</header><!-- .entry-header -->
+
+	</article><!-- #post-## -->
+
+</div><!-- .col-12 -->

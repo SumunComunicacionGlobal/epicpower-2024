@@ -27974,7 +27974,11 @@ img.imagen-pagina-hija {
   margin-bottom: 2rem;
 }
 
-.wp-block-image.logo-award:after, .widget-title:after, .comment-reply-title:after, .search .page-title:after, .related-content-title:after {
+.wp-block-image.logo-award:before,
+.widget-title:before,
+.comment-reply-title:before,
+.search .page-title:before,
+.related-content-title:before {
   content: "";
   position: relative;
   display: block;
@@ -27992,8 +27996,8 @@ img.imagen-pagina-hija {
 }
 
 .related-content-title {
-  border-top: 1px solid #009EE2;
-  padding-top: 0.5rem;
+  border-bottom: 1px solid;
+  padding-bottom: 0.5rem;
 }
 
 .wp-block-cover.p-0, .wp-block-cover-image.p-0 {
