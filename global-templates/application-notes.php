@@ -50,4 +50,4 @@ if ( $q->have_posts() ) { ?>
 
 wp_reset_postdata();
 
-echo do_shortcode( '[facetwp facet="pagination"]' );
+echo do_shortcode( '[facetwp facet="load_more_application_notes"]' );
