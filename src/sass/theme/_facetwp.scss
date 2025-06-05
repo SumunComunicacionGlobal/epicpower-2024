@@ -75,3 +75,11 @@ select.facetwp-dropdown {
 	text-transform: uppercase;
 	font-weight: $font-weight-bold;
 }
+
+.facetwp-load-more {
+	@extend .btn;
+	@extend .btn-outline-primary-400;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
