@@ -20683,6 +20683,7 @@ span.read-more:hover,
 .wp-block-buttons .wp-block-button.is-style-arrow-link .wp-block-button__link:hover {
   text-decoration: none;
   opacity: 0.8;
+  background-color: transparent;
 }
 a.read-more:hover:after,
 p.read-more > a:hover:after,
