@@ -1237,6 +1237,7 @@ span.read-more,
 		text-decoration: none;
 		opacity: .8;
 		background-color: transparent;
+		color: darken($link-color, 10%);
 
 		&:after {
 			margin-left: 1.6rem;
