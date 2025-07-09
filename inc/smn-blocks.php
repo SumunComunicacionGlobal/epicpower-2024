@@ -410,26 +410,26 @@ function acf_load_categoria_de_productos_choices( $field ) {
     
 }
 
-add_filter( 'render_block', 'sumun_bootstrap_buttons', 10, 2 );
-function sumun_bootstrap_buttons( $block_content, $block ) {
-    if ( $block['blockName'] !== 'core/button' ) return $block_content;
+// add_filter( 'render_block', 'sumun_bootstrap_buttons', 10, 2 );
+// function sumun_bootstrap_buttons( $block_content, $block ) {
+//     if ( $block['blockName'] !== 'core/button' ) return $block_content;
 
-    $block_content = str_replace( 'wp-block-button__link', 'wp-block-button__link btn', $block_content);
+//     $block_content = str_replace( 'wp-block-button__link', 'wp-block-button__link btn', $block_content);
 
-    if ( isset( $block['attrs']['backgroundColor'] ) ) return $block_content;
+//     if ( isset( $block['attrs']['backgroundColor'] ) ) return $block_content;
 
-    if ( isset( $block['attrs']['className'] ) && strpos( $block['attrs']['className'], 'is-style-outline') !== false ) {
-        $block_content = str_replace( 'is-style-outline', '', $block_content);
-        $block_content = str_replace( 'wp-block-button__link btn', 'wp-block-button__link btn btn-outline-primary shadow', $block_content);
-        return $block_content;
-    }
+//     if ( isset( $block['attrs']['className'] ) && strpos( $block['attrs']['className'], 'is-style-outline') !== false ) {
+//         $block_content = str_replace( 'is-style-outline', '', $block_content);
+//         $block_content = str_replace( 'wp-block-button__link btn', 'wp-block-button__link btn btn-outline-primary shadow', $block_content);
+//         return $block_content;
+//     }
 
 
 
-    $block_content = str_replace( 'wp-block-button__link btn', 'wp-block-button__link btn btn-primary', $block_content);
-    return $block_content;
+//     $block_content = str_replace( 'wp-block-button__link btn', 'wp-block-button__link btn btn-primary', $block_content);
+//     return $block_content;
 
-}
+// }
 
 
 // add_filter( 'render_block', 'sumun_animaciones_bloques', 10, 2 );

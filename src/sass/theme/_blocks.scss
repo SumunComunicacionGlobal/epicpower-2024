@@ -153,8 +153,24 @@ body.understrap-no-sidebar {
             }
         }
 
-        &.is-style-outline .wp-block-button__link {
-            border-width: $btn-border-width;
+        &.is-style-outline {
+
+            .wp-block-button__link {
+                border-width: $btn-border-width;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &:not(.has-text-color) .wp-block-button__link {
+                color: $link-color;
+            }
+
+            &:not(.has-background) .wp-block-button__link {
+                background-color: transparent;
+            }
+
         }
 
     }
@@ -163,6 +179,11 @@ body.understrap-no-sidebar {
 
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-background) {
     background-color: $primary;
+
+    &:hover {
+        color: $white;
+        background-color: darken($primary, 10%);
+    }
 }
 
 

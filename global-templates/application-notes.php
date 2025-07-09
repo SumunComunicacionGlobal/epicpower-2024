@@ -30,11 +30,11 @@ if ( $q->have_posts() ) { ?>
 
 	<div class="wrapper application-notes" id="wrapper-application-notes">
 
-		<div class="row">
+		<div class="row g-3">
 
 			<?php while ( $q->have_posts() ) { $q->the_post();
 
-				echo '<div class="col-md-6 col-lg-4 mb-4">';
+				echo '<div class="col-md-6 col-lg-4 mb-1">';
 
 					get_template_part( 'loop-templates/content', 'background' );
 

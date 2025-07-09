@@ -26637,9 +26637,22 @@ body.understrap-no-sidebar .alignwide {
 .wp-block-buttons .wp-block-button.is-style-outline .wp-block-button__link {
   border-width: 1px;
 }
+.wp-block-buttons .wp-block-button.is-style-outline .wp-block-button__link:hover {
+  text-decoration: underline;
+}
+.wp-block-buttons .wp-block-button.is-style-outline:not(.has-text-color) .wp-block-button__link {
+  color: #0064e2;
+}
+.wp-block-buttons .wp-block-button.is-style-outline:not(.has-background) .wp-block-button__link {
+  background-color: transparent;
+}
 
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-background) {
   background-color: #009EE2;
+}
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-background):hover {
+  color: #fff;
+  background-color: #007aaf;
 }
 
 .wp-block-buttons {
