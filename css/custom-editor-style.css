@@ -27281,6 +27281,9 @@ select.facetwp-dropdown {
 .wp-block-cover.application-note-cover .entry-content, .wp-block-cover.case-study-cover .entry-content {
   font-size: 0.875rem;
 }
+.wp-block-cover.application-note-cover .wp-block-cover__background, .wp-block-cover.case-study-cover .wp-block-cover__background {
+  transition: all 0.2s ease-in-out;
+}
 .wp-block-cover.application-note-cover {
   align-items: flex-start;
 }
@@ -27292,6 +27295,10 @@ select.facetwp-dropdown {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.wp-block-cover.case-study-cover:hover .wp-block-cover__background {
+  background-color: #0064e2 !important;
+  opacity: 1;
 }
 
 .single-case_study #content {

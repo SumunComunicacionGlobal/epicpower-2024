@@ -13,15 +13,15 @@ $post_type_label = get_post_type_object( get_post_type() )->labels->singular_nam
 
 $background_class = 'has-background-dim-100';
 if ( has_post_thumbnail() ) {
-	$background_class = 'has-background-dim-90';
+	$background_class = 'has-background-dim-70';
 }
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<div class="wp-block-cover case-study-cover stretch-linked-block">
+	<div class="wp-block-cover case-study-cover">
 
-		<span class="wp-block-cover__background has-primary-200-background-color has-background-dim <?php echo esc_attr( $background_class ); ?>" aria-hidden="true"></span>
+		<span class="wp-block-cover__background has-primary-600-background-color has-background-dim <?php echo esc_attr( $background_class ); ?>" aria-hidden="true"></span>
 
 		<?php the_post_thumbnail( 'medium_large', array( 'class' => 'wp-block-cover__image-background' ) ); ?>
 

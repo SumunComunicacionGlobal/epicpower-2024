@@ -30,6 +30,10 @@
         .entry-content {
             font-size: $font-size-sm;
         }
+
+        .wp-block-cover__background {
+            transition: $transition-base;
+        }
         
     }
 
@@ -49,6 +53,11 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+        }
+
+        &:hover .wp-block-cover__background {
+            background-color: $primary-200 !important;
+            opacity: 1;
         }
 
     }
