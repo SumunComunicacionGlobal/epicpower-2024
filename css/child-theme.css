@@ -19341,7 +19341,7 @@ select.facetwp-dropdown {
   flex-direction: column;
   justify-content: space-between;
 }
-.wp-block-cover.case-study-cover:hover .wp-block-cover__background {
+.wp-block-cover.case-study-cover.has-image-background:hover .wp-block-cover__background {
   background-color: #0064e2 !important;
   opacity: 1;
 }

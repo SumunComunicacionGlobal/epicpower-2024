@@ -55,7 +55,7 @@
             justify-content: space-between;
         }
 
-        &:hover .wp-block-cover__background {
+        &.has-image-background:hover .wp-block-cover__background {
             background-color: $primary-200 !important;
             opacity: 1;
         }

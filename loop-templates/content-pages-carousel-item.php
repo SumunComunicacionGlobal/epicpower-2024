@@ -23,7 +23,7 @@ if ( 'dark' === $color_scheme ) {
 
 $background_dim_class = 'has-background-dim-100';
 if ( $show_image && has_post_thumbnail() ) {
-	$background_dim_class = 'has-background-dim-90';
+	$background_dim_class = 'has-background-dim-90 has-background-image';
 }
 
 $icono = get_post_meta( get_the_ID(), 'icono', true );
