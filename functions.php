@@ -104,9 +104,7 @@ function theme_enqueue_styles() {
 	wp_enqueue_style( 'slick', get_stylesheet_directory_uri() . '/js/slick/slick.css' );
     wp_enqueue_style( 'slick-theme', get_stylesheet_directory_uri() . '/js/slick/slick-theme.css' );
 
-    if ( is_archive() ) {
-        wp_enqueue_style( 'wp-block-cover' );
-    }
+    wp_enqueue_style( 'wp-block-cover' );
 
 	// Get the theme data.
 	$the_theme     = wp_get_theme();
