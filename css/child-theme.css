@@ -17943,6 +17943,18 @@ body.scrolled #wrapper-navbar {
   top: 0;
 }
 
+.z-1 {
+  z-index: 1;
+}
+
+.z-2 {
+  z-index: 2;
+}
+
+.mt-n8 {
+  z-index: 1;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0064e2;
