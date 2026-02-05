@@ -272,6 +272,11 @@ function smn_get_product_links( $product = null ) {
 
 	$r .= wpautop( '<a href="'. $link .'" title="'. __( 'Related downloads', 'epicpower' ) .'" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> '. __( 'Related downloads', 'epicpower' ) . '</a>' );
 
+	$cad_file_id = get_field('3d_file', $product);
+	if ( $cad_file_id ) {
+		$attachment_url = wp_get_attachment_url( $cad_file_id );
+		$r .= wpautop( '<a href="'.$attachment_url.'" title="'.__( 'Download 3D file', 'epicpower' ).'" target="_blank" rel="noopener noreferrer"><i class="fa fa-download"></i> '.__( '3D file', 'epicpower' ).'</a>' );
+	}
 
 	return $r;
 }
